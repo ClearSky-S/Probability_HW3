@@ -15,7 +15,7 @@ def p_poi(k, lam):
     return (lam**k)*np.exp(-lam)/np.math.factorial(k)
 
 
-trial = 1000 # should be 1000 at actual run
+trial = 1000  # should be 1000 at actual run
 n = 1000
 # p = 0.05
 p = float(input("input p(0~1) >>> "))
