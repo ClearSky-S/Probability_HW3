@@ -41,13 +41,13 @@ for i in range(0, n*time_limit):
 
 exp_math_result = np.array([pdf_exp(k/n, lamda)/n for k in range(0, n*time_limit)])
 
-
+x_index = np.array([k/n for k in range(0, n*time_limit)])
 plt.title('exp pdf')
 plt.xlabel('x')
 plt.ylabel('f (X=x)')
-plt.xlim([0, 100])
-plt.plot(exp_simulation_result, label="Simulation")
-plt.plot(exp_math_result, label="Theory")
+plt.xlim([0, 0.1])
+plt.plot(x_index,exp_simulation_result, label="Simulation")
+plt.plot(x_index,exp_math_result, label="Theory")
 plt.legend()
 plt.show()
 
@@ -58,8 +58,8 @@ exp_math_result = np.array([cdf_exp(k/n, lamda) for k in range(0, n*time_limit)]
 plt.title('exp cdf')
 plt.xlabel('T')
 plt.ylabel('P (X<T)')
-plt.xlim([0, 100])
-plt.plot(exp_simulation_result, label="Simulation")
-plt.plot(exp_math_result, label="Theory")
+plt.xlim([0, 0.1])
+plt.plot(x_index,exp_simulation_result, label="Simulation")
+plt.plot(x_index,exp_math_result, label="Theory")
 plt.legend()
 plt.show()
