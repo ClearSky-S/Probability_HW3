@@ -47,3 +47,7 @@ plt.plot(poi_math_result, label="math")
 plt.legend()
 plt.show()
 
+mean = 0
+for i in range(int(lamda * 2)):
+    mean += i*poi_math_result[i]
+print(mean)
