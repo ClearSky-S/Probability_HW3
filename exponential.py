@@ -17,7 +17,7 @@ def exponential(n=1000, p=0.05, seed=0, time_limit=1000):
 def pdf_exp(t, lamda):
     return lamda*np.exp(-lamda*t)
 
-def cdf_exp(t, lam):
+def cdf_exp(t, lamda):
     return 1-np.exp(-lamda*t)
 
 n = 1000  # 단위 시간 동안의 시행 횟수 (총 시행 횟수가 아니다)
